@@ -6,6 +6,9 @@ app.controller('login',['$scope','$location','Usertable',function($scope,$locati
       .$promise
       .then(function(results) {
         $scope.all = results;
+        if($scope.all.length==0){
+          $scope.loginErr=true;
+        }
         for(var i=0;i<$scope.all.length;i++){
           if($scope.all[i].name==$scope.user.name&&$scope.all[i].password==$scope.user.password){
             $location.path('/content');
