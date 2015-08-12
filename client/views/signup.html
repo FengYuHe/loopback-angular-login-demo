@@ -1,0 +1,20 @@
+<div class="signupDiv">
+  <h2>signup</h2>
+  <form class="signupForm" name="signupForm" ng-submit="signup()">
+    <div>
+      <input ng-model="newUser.name" type="text" class="name" placeholder="username" required/>
+    </div>
+    <div>
+      <input ng-model="newUser.password" type="password" class="password" placeholder="password" required/>
+    </div>
+    <div>
+      <input ng-model="newUser.phone" type="text" class="phone" placeholder="phone"/>
+    </div>
+    <div>
+      <input ng-model="newUser.email" type="text" class="email" placeholder="email"/>
+    </div>
+    <div>
+      <button class="signup" ng-disabled="signupForm.$invalid" ng-click="signup()">signup</button>
+    </div>
+  </form>
+</div>

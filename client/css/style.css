@@ -1,0 +1,60 @@
+body{
+	background-color: #4A4C44;
+}
+h2{
+  text-align: center;
+    color: #08F9D4;
+}
+.view{
+  height: 500px;
+}
+.name, .password, .email, .phone{
+  font-size: 16px;
+  height: 32px;
+  border-color: #b2bfc7;
+  padding-left: 12px;
+  border-radius:8px;
+}
+
+.loginDiv input{
+  margin-bottom: 24px;
+}
+
+.signupDiv input{
+  margin-bottom: 14px;
+}
+
+.login,.signup{	
+  border-color: #2480c2;
+  //color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.35) 0 1px 0;
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(#54b3ff, #0078d9);
+  height: 33px;
+  width: 87px;
+  border-radius:8px;
+}
+
+.loginDiv,.signupDiv{
+  background-color: #242A20;
+  margin: 200px auto auto auto;
+  border-radius: 12px;
+  float: none;
+}
+
+.loginDiv{
+  width: 400px;
+  height: 250px;
+}
+.signupDiv{
+  width: 450px;
+  height: 315px;
+}
+
+.loginForm,.signupForm{
+    text-align: center;
+}
+
+.loginErr{
+  color:red;
+}

@@ -1,0 +1,20 @@
+<div class="loginDiv">
+  <h2>Login</h2>
+  <form class="loginForm" name="loginForm" ng-submit="login()">
+    <div class="loginInput">
+      <input ng-model="user.name" type="text" class="name" placeholder="username" focus required/>
+      </br>
+    </div>
+    <div class="loginInput">
+      <input ng-model="user.password" type="password" placeholder="password" class="password" required/>
+      </br>
+    </div>
+    <div>
+      <button type="submit" class="login" ng-disabled="loginForm.$invalid">login</button>
+      <button class="signup" type="button" ng-click="goSignup()">signup</button>
+    </div>
+    <span class="loginErr" ng-show="loginErr">
+      Error for username or password.
+      </span>
+  </form>
+</div>
