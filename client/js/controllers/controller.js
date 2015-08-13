@@ -34,6 +34,9 @@ app.controller('signup',['$scope','$location','Usertable',function($scope,$locat
         $location.path('/success');
       });
   }
+  $scope.return = function () {
+    $location.path('/');
+  }
 }]);
 
 app.controller('success',['$scope','$location',function($scope,$location){
