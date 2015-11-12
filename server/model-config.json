@@ -35,5 +35,9 @@
   "usertable": {
     "dataSource": "db",
     "public": true
+  },
+  "deviceTest": {
+    "dataSource": "db",
+    "public": true
   }
 }

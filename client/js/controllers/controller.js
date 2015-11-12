@@ -45,7 +45,40 @@ app.controller('success',['$scope','$location',function($scope,$location){
   }
 }]);
 
-app.controller('content',['$scope','$location',function($scope,$location){
+app.controller('content',['$scope','$location','$http',function($scope,$location,$http){
+  $scope.message = [];
+    var pubnub = PUBNUB({
+        subscribe_key: 'ds',
+        publish_key: 'ds'
+    });
+    pubnub.subscribe({
+        channel: 'device',
+        message: function(m){
+          $scope.$apply(function(){
+            $scope.message.push(m.text);
+          })
+        },
+        error: function (error) {
+          console.log(JSON.stringify(error));
+        }
+     });
+
+    $scope.deviceMsg = function(){
+      var req = {
+         method: 'POST',
+         url: 'http://localhost:3000/api/deviceTests/test',
+         data: { "device": $scope.device },
+        };
+
+      $http(req).
+      success(function(data, status, headers, config) {
+        //alert(data);
+      }).
+      error(function(data, status, headers, config) {
+        //alert('======');
+      });
+    }
+
     $scope.return = function(){
       $location.path('/');
     }

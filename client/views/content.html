@@ -1,4 +1,13 @@
-<p>welcome to world!</p>
-  <div>
-    <button ng-click="return()">return</button>
-  </div>
+<div>
+<!-- <button ng-click="return()">return</button> -->
+<div>
+	<label>设备：</label>
+	<input type="text" ng-model='device'>
+	<button ng-click='deviceMsg()'>获取数据</button>
+</div>
+<div>
+	<ul ng-repeat = "msg in message">
+		<li>{{msg}}</li>
+	</ul>
+</div>
+</div>
