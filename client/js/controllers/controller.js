@@ -48,14 +48,15 @@ app.controller('success',['$scope','$location',function($scope,$location){
 app.controller('content',['$scope','$location','$http',function($scope,$location,$http){
   $scope.message = [];
     var pubnub = PUBNUB({
-        subscribe_key: 'ds',
-        publish_key: 'ds'
+        subscribe_key: 'sub-c-98573afe-399d-11e5-9689-0619f8945a4f',
+        publish_key: 'pub-c-dca488be-114d-44d0-b561-0049b670bb29'
     });
     pubnub.subscribe({
-        channel: 'device',
+        channel: '622136652f29fe1d3727f4a686eb4b8373f06562',
         message: function(m){
+          console.log(m);
           $scope.$apply(function(){
-            $scope.message.push(m.text);
+            $scope.message.push(m);
           })
         },
         error: function (error) {
