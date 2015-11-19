@@ -16,9 +16,13 @@ app.config(['$stateProvider', '$urlRouterProvider',function($stateProvider,
         templateUrl: 'views/success.html',
         controller: 'success'
       }).state('content', {
-        url: '/content',
+        url: '/content?deviceId&method',
         templateUrl: 'views/content.html',
         controller: 'content'
+      }).state('device', {
+        url: '/device',
+        templateUrl: 'views/device.html',
+        controller: 'device'
       });
   $urlRouterProvider.otherwise('/');
 }]);

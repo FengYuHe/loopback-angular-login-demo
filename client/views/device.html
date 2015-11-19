@@ -1,0 +1,30 @@
+<div class="content">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>deviceId</th>
+									<th>channel</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="device in listDevice">
+									<th>{{device.deviceId}}</th>
+									<th>
+										<select ng-model="selectdChannel[device.deviceId]" ng-options="option for option in device.channel" ></select>
+									</th>
+									<th><button type="button" class="btn btn-primary" ng-click="goPushMsg(device.deviceId)" ng-disabled="!selectdChannel[device.deviceId] || !selectdChannel[device.deviceId]===device.deviceId">下发数据</button></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,13 +1,52 @@
-<div>
-<!-- <button ng-click="return()">return</button> -->
-<div>
-	<label>设备：</label>
-	<input type="text" ng-model='device'>
-	<button ng-click='deviceMsg()'>获取数据</button>
-</div>
-<div>
-	<ul ng-repeat = "msg in message">
-		<li>{{msg}}</li>
-	</ul>
-</div>
+<div class="content">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="col-sm-2 control-label">deviceId：</label>
+							<div class="col-md-4">
+								<input class="form-control" type="text" ng-model='deviceId' ng-disabled = "true">
+							</div>
+						</div>
+						<br>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">channelId：</label>
+							<div class="col-md-4">
+								<input class="form-control" type="text" ng-model='channelId' ng-disabled = "true">
+							</div>
+						</div>
+						<br>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">method：</label>
+							<div class="col-md-4">
+								<input class="form-control" type="text" ng-model='method' ng-disabled = "true">
+							</div>
+						</div>
+						<br>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">params：</label>
+							<div class="col-md-4">
+								<textarea class="form-control" type="text" ng-model='params'></textarea>
+							</div>
+						</div>
+						<br>
+						<div class="form-group">
+							<div class="col-md-4 col-sm-offset-2">
+								<button ng-click='pushMsg()' class="btn btn-primary">下发数据</button>
+								<button ng-click='returnDevice()' class="btn btn-warning">返回</button>
+							</div>
+						</div>
+						<br>
+					</form>
+					<div>
+						<ul ng-repeat = "msg in message">
+							<li>{{msg}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
