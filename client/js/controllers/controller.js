@@ -1,6 +1,6 @@
 var app = angular.module('myapp');
 
-var token = "stok-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7ImlkIjoiNDQ4YzE1NDAtNWFjMC0xMWU1LWJlNGQtMWRiY2I0MmE5ZmU2IiwidXNlcm5hbWUiOiJib2IiLCJlbWFpbCI6ImJAYmFyLmNvbSIsImFjY2Vzc1Rva2VuIjoid2NNRVM0NTRHdmM0YnJKOTM4Vm03OXZwYThwZWJ5algifSwiaWF0IjoxNDQ3OTAwNjIzLCJleHAiOjE0NDc5ODcwMjMsImlzcyI6ImNsb3VkLXNlcnZpY2UtYmFjayJ9.O-Ay5F0kamjARe4xVFvKbYGT__B2kBAkgu3v5DTt0Ms";
+var token = "ntok-271d825d02083e37fbd3fa6d68e614f1";
 
 app.controller('login',['$scope','$location','Usertable',function($scope,$location,Usertable){
 	$scope.login = function(){
